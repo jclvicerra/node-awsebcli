@@ -1,5 +1,12 @@
-FROM node:alpine
+FROM node:10.16.0
+
+RUN apt-get update
+
+# Install python
 RUN \
-  apk update && \
-  apk add git python py-pip && \
-  pip install awsebcli
+  apt-get install -y python python-dev python-pip python-virtualenv && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Install awsebcli
+RUN pip install --upgrade awsebcli
