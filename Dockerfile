@@ -9,4 +9,4 @@ RUN \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install awsebcli
-RUN pip install --upgrade awsebcli
+RUN pip install --upgrade awsebcli awscli s3cmd
