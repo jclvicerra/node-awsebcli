@@ -1,6 +1,6 @@
 # node-awsebcli
 
-Base Image: Node:12.14.1
+Base Image: Node
 
 Installed Libraries:
 
