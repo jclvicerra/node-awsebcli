@@ -13,7 +13,7 @@
 # nodejs: 14.17.1
 # npmversion: 6.14.15
 
-FROM python:3.10.5-slim
+FROM python:3.10.10-slim
 
 ENV POETRY_HOME=/usr/local
 # Install node prereqs, nodejs and yarn
@@ -30,6 +30,6 @@ RUN \
   apt-mark hold nodejs && \
   pip install -U pip && pip install pipenv && \
   pip install --upgrade awsebcli awscli s3cmd && \
-  npm i -g npm@^6.14.15 && \
+  npm i -g npm@^6.14.18 && \
   wget -q -O - https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python - && \
   rm -rf /var/lib/apt/lists/*
